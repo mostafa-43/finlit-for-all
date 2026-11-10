@@ -1,0 +1,68 @@
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container">
+    <h1>Free Financial Resources</h1>
+    <p>Download our collection of templates, guides, and tools to support your financial journey.</p>
+  </div>
+</section>
+
+<!-- Resources Content -->
+<section class="container my-5">
+  <div class="row">
+    <!-- Sidebar -->
+    <aside class="col-lg-3 mb-4">
+      <div class="sidebar">
+        <h5>Filter by Category</h5>
+        <ul class="category-list">
+          <li>
+            <a href="javascript:void(0)"
+               (click)="selectCategory('')"
+               [class.active]="!selectedCategory">
+              All Resources
+            </a>
+          </li>
+          <li *ngFor="let category of categories">
+            <a href="javascript:void(0)"
+               (click)="selectCategory(category)"
+               [class.active]="selectedCategory === category">
+              {{ category }}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Resources -->
+    <div class="col-lg-9">
+      <div *ngIf="loading" class="text-center py-5">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+
+      <div *ngIf="!loading && resources.length > 0">
+        <div class="row g-4">
+          <div *ngFor="let resource of resources" class="col-md-6 col-lg-4">
+            <app-resourse-card [resource]="resource"></app-resourse-card>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="!loading && resources.length === 0" class="alert alert-info">
+        <i class="bi bi-info-circle me-2"></i>
+        No resources found in this category. Please select another category.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="bg-light-bg py-5">
+  <div class="container text-center">
+    <h2 class="mb-3">Want More Financial Education?</h2>
+    <p class="lead mb-4">Check out our blog for in-depth articles on personal finance topics.</p>
+    <a href="/blog" class="btn btn-primary btn-lg">
+      <i class="bi bi-book me-2"></i>Read Our Blog
+    </a>
+  </div>
+</section>

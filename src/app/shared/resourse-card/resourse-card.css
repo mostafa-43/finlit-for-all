@@ -1,0 +1,15 @@
+/* Resource Card Styles */
+.resource-card {
+  overflow: hidden;
+}
+
+.resource-card-image {
+  height: 250px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.resource-card:hover .resource-card-image {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}

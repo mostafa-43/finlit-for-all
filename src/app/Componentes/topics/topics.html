@@ -1,0 +1,47 @@
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container">
+    <h1>Financial Topics</h1>
+    <p>Explore our categorized collection of personal finance topics and resources.</p>
+  </div>
+</section>
+
+<!-- Topics Grid -->
+<section class="container my-5">
+  <div *ngIf="loading" class="text-center py-5">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <div *ngIf="!loading" class="row g-4">
+    <div *ngFor="let category of categories" class="col-md-6 col-lg-4">
+      <div class="card topic-card h-100">
+        <div class="card-body text-center">
+          <i class="bi bi-folder2 topic-icon"></i>
+          <h5 class="card-title mt-3">{{ category.name }}</h5>
+          <p class="card-text text-muted">{{ category.description }}</p>
+          <div class="mt-4">
+            <a routerLink="/blog" class="btn btn-primary btn-sm">
+              <i class="bi bi-book me-2"></i>{{ category.count }} Articles
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="bg-light-bg py-5">
+  <div class="container text-center">
+    <h2 class="mb-3">Ready to Deepen Your Financial Knowledge?</h2>
+    <p class="lead mb-4">Explore all our articles and resources to start your financial literacy journey today.</p>
+    <a routerLink="/blog" class="btn btn-primary btn-lg me-3">
+      <i class="bi bi-book me-2"></i>Read Blog Articles
+    </a>
+    <a routerLink="/resources" class="btn btn-outline-primary btn-lg">
+      <i class="bi bi-download me-2"></i>Download Resources
+    </a>
+  </div>
+</section>

@@ -1,0 +1,60 @@
+/* Login Page Styles */
+.auth-section {
+  background: linear-gradient(135deg, var(--light-bg) 0%, #ffffff 100%);
+}
+
+.min-vh-100 {
+  min-height: 100vh;
+}
+
+.card {
+  border-radius: 1rem;
+}
+
+.card-body {
+  background-color: #ffffff;
+}
+
+.form-control:focus,
+.input-group .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(44, 90, 160, 0.25);
+}
+
+.input-group .btn-outline-secondary:hover {
+  background-color: transparent;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.btn-primary:disabled {
+  background-color: var(--text-light);
+  border-color: var(--text-light);
+  cursor: not-allowed;
+}
+
+.form-check-input:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .card-body {
+    padding: 1.5rem !important;
+  }
+
+  .card {
+    border-radius: 0.75rem;
+  }
+}

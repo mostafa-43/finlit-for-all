@@ -1,0 +1,26 @@
+/* Newsletter Form Styles */
+.newsletter-form {
+  padding: 1.5rem;
+}
+
+.newsletter-form h4 {
+  font-weight: 700;
+}
+
+.newsletter-form .input-group {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.newsletter-form input:focus {
+  border-color: var(--primary-color);
+}
+
+@media (max-width: 576px) {
+  .input-group {
+    flex-direction: column;
+  }
+
+  .input-group button {
+    margin-top: 0.5rem;
+  }
+}

@@ -1,0 +1,13 @@
+/* Resources Page Styles */
+.category-list a.active {
+  color: var(--primary-color);
+  font-weight: 700;
+  border-left: 3px solid var(--accent-color);
+  padding-left: 0.75rem;
+}
+
+@media (max-width: 991px) {
+  .sidebar {
+    margin-bottom: 2rem;
+  }
+}

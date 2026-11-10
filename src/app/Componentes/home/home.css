@@ -1,0 +1,27 @@
+/* Home Page Styles */
+.hero-section img {
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.featured-section {
+  padding: 3rem 0;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem 0;
+  }
+
+  .hero-section h1 {
+    font-size: 1.75rem;
+  }
+
+  .d-flex.gap-3 {
+    flex-direction: column;
+  }
+
+  .btn-lg {
+    width: 100%;
+  }
+}

@@ -1,0 +1,387 @@
+/* FinLit for All - Global Styles */
+
+:root {
+  --primary-color: #2c5aa0;
+  --secondary-color: #1a3a52;
+  --accent-color: #f59e0b;
+  --light-bg: #f8fafc;
+  --text-dark: #1e293b;
+  --text-light: #64748b;
+  --border-color: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-dark);
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-dark);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+/* Bootstrap Customizations */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-accent {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: white;
+}
+
+.btn-accent:hover {
+  background-color: #d97706;
+  border-color: #d97706;
+  color: white;
+}
+
+/* Layout */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--primary-color) !important;
+}
+
+.navbar-brand:hover {
+  color: var(--secondary-color) !important;
+}
+
+.nav-link {
+  color: var(--text-dark) !important;
+  font-weight: 500;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-color) !important;
+}
+
+.nav-link.active {
+  color: var(--primary-color) !important;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.25rem;
+}
+
+/* Footer Styling */
+footer {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  margin-top: auto;
+  padding: 3rem 0 1rem;
+}
+
+footer a {
+  color: var(--accent-color);
+}
+
+footer a:hover {
+  color: #fbbf24;
+}
+
+footer h6 {
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer li {
+  margin-bottom: 0.5rem;
+}
+
+/* Cards */
+.card {
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  background-color: var(--light-bg);
+  border-color: var(--border-color);
+}
+
+/* Article Cards */
+.article-card {
+  overflow: hidden;
+}
+
+.article-card-image {
+  height: 200px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.article-card:hover .article-card-image {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.article-category {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+/* Forms */
+.form-label {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.form-control,
+.form-select {
+  border: 1px solid var(--border-color);
+  border-radius: 0.375rem;
+  padding: 0.75rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(44, 90, 160, 0.25);
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  padding: 4rem 0;
+  margin-bottom: 3rem;
+}
+
+.hero-section h1 {
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.hero-section p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+/* Featured Section */
+.featured-section {
+  padding: 3rem 0;
+}
+
+.section-title {
+  color: var(--text-dark);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid var(--accent-color);
+}
+
+/* Newsletter Form */
+.newsletter-section {
+  background-color: var(--light-bg);
+  padding: 3rem 0;
+  margin: 3rem 0;
+  border-radius: 0.75rem;
+}
+
+.newsletter-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: var(--light-bg);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.sidebar h5 {
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+}
+
+.category-list li {
+  margin-bottom: 0.75rem;
+}
+
+.category-list a {
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.category-list a:hover {
+  color: var(--secondary-color);
+  padding-left: 0.5rem;
+  transition: padding 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section {
+    padding: 2rem 0;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+}
+
+/* Utility Classes */
+.text-accent {
+  color: var(--accent-color);
+}
+
+.bg-light-bg {
+  background-color: var(--light-bg);
+}
+
+.border-accent {
+  border: 2px solid var(--accent-color);
+}
+
+.mt-section {
+  margin-top: 3rem;
+}
+
+.mb-section {
+  margin-bottom: 3rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}

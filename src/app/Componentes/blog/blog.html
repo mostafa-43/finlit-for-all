@@ -1,0 +1,58 @@
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container">
+    <h1>Financial Education Blog</h1>
+    <p>Explore our collection of articles on personal finance, investing, budgeting, and more.</p>
+  </div>
+</section>
+
+<!-- Blog Content -->
+<section class="container my-5">
+  <div class="row">
+    <!-- Sidebar -->
+    <aside class="col-lg-3 mb-4">
+      <div class="sidebar">
+        <h5>Filter by Category</h5>
+        <ul class="category-list">
+          <li>
+            <a href="javascript:void(0)"
+               (click)="selectCategory('')"
+               [class.active]="!selectedCategory">
+              All Articles
+            </a>
+          </li>
+          <li *ngFor="let category of categories">
+            <a href="javascript:void(0)"
+               (click)="selectCategory(category.name)"
+               [class.active]="selectedCategory === category.name">
+              {{ category.name }}
+              <span class="badge bg-primary ms-2">{{ category.count + (selectedCategory === category.name ? articles.length : 0) }}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Articles -->
+    <div class="col-lg-9">
+      <div *ngIf="loading" class="text-center py-5">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+
+      <div *ngIf="!loading && articles.length > 0">
+        <div class="row g-4">
+          <div *ngFor="let article of articles" class="col-md-6">
+            <app-article-card [article]="article"></app-article-card>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="!loading && articles.length === 0" class="alert alert-info">
+        <i class="bi bi-info-circle me-2"></i>
+        No articles found in this category. Please select another category.
+      </div>
+    </div>
+  </div>
+</section>

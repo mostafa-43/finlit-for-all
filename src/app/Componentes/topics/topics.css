@@ -1,0 +1,22 @@
+/* Topics Page Styles */
+.topic-card {
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.topic-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.topic-icon {
+  font-size: 3rem;
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .topic-card {
+    margin-bottom: 1rem;
+  }
+}
